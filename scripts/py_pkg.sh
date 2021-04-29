@@ -25,7 +25,8 @@ fi
 deactivate
 #creating deployment package
 cd env-$function_name/lib/$runtime/site-packages/
-cp -r . $path_cwd/$dir_name
+cp -r env-$function_name/lib/$runtime/site-packages/* $path_cwd/$dir_name/
+cp -r env-$function_name/lib64/$runtime/site-packages/* $path_cwd/$dir_name/
 cp -r $source_code_path/ $path_cwd/$dir_name
 #removing virtual env folder
 rm -rf $path_module/env-$function_name/
